@@ -31,9 +31,9 @@ def lookup(ip):
 			listed+= 1
 		except:
 			x = 0
-	return [str(listed), l_rbl]		
+	return [str(listed), l_rbl]
 
-#Execution starts here	
+#Execution starts here
 try:
 	for ip in ipaddress.IPv4Network(sys.argv[1].strip("'")):	# Extracting IPs from the given network
 		check = lookup(ip)
@@ -43,6 +43,6 @@ try:
 			print(str(ip) + ' is clean' )
 except Exception as e:
 	print('Error :' + str(e))
-		
-		
-		
+
+
+
